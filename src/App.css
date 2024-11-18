@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  background: lightskyblue;
+}
+header {
+  border-bottom: solid 1px lightgrey;
+  padding: 15px 5px;
+}
+header img {
+  width: 150px;
+}
