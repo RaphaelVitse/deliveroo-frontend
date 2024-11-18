@@ -3,7 +3,7 @@
 }
 
 .container {
-  width: 1024px;
+  width: 1200px;
   margin: 0 auto;
   background: lightskyblue;
 }
@@ -13,4 +13,23 @@ header {
 }
 header img {
   width: 150px;
+}
+
+/* PARTIE TITLE */
+.title-container {
+  display: flex;
+}
+
+.title-img img {
+  height: 200px;
+}
+
+/* PARTIE MENUS*/
+
+.food-container {
+  background: #f3f5f5;
+}
+
+.meals-img img {
+  width: 200px;
 }
