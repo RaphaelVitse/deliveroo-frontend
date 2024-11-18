@@ -1,7 +1,9 @@
 const Header = ({ logo }) => {
   return (
     <header>
-      <img src={logo} alt="logo deliveroo" />
+      <div className="container">
+        <img src={logo} alt="logo deliveroo" />
+      </div>
     </header>
   );
 };

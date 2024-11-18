@@ -31,8 +31,8 @@ function App() {
   ) : (
     <>
       <Header logo={logo} />
-      <main className="container">
-        <section className="title-container">
+      <main>
+        <section className="title-container container">
           <div className="title">
             <h2>{data.restaurant.name}</h2>
             <p>{data.restaurant.description}</p>
@@ -41,23 +41,35 @@ function App() {
             <img src={data.restaurant.picture} alt="" />
           </div>
         </section>
-        <section className="food-container">
-          {data.categories.map((elem) => {
-            {
-              console.log(elem);
-            }
-            return <h3 key={elem}> {data.categories[elem].name}</h3>;
-          })}
-          {/* {data.categories[0].name} */}
-          <div className="meals-container">
-            <div className="meals-description">
-              <h4>{data.categories[0].meals[0].title}</h4>
-              <p>{data.categories[0].meals[0].description}</p>
-              <p>{data.categories[0].meals[0].price}</p>
-            </div>
-            <div className="meals-img">
-              <img src={data.categories[0].meals[0].picture} alt="" />
-            </div>
+        <section className="menu-container ">
+          <div className="food-container container">
+            {data.categories.map((category, index) => {
+              console.log(category);
+
+              return (
+                <>
+                  {category.meals.length !== 0 && (
+                    <h3 key={category.name}> {category.name}</h3>
+                  )}
+                  <div key={index} className="meals-card">
+                    {category.meals.map((meal) => {
+                      return (
+                        <div key={meal.id} className="meals-container">
+                          <div className="meals-description">
+                            <h4>{meal.title}</h4>
+                            {meal.description && <p>{meal.description}</p>}
+                            <p>{meal.price} €</p>
+                          </div>
+                          <div className="meals-img">
+                            {meal.picture && <img src={meal.picture} alt="" />}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </>
+              );
+            })}
           </div>
         </section>
       </main>
