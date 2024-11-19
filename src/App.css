@@ -5,8 +5,13 @@
 body {
   font-family: system-ui, sans-serif;
 }
+
+.main-left {
+  background: lightcoral;
+  width: 70%;
+}
 .container {
-  max-width: 1220px;
+  max-width: 1240px;
   margin: 0 auto;
   /* background: lightskyblue; */
   padding: 15px 20px;
@@ -59,9 +64,11 @@ header img {
   object-fit: cover;
 }
 
-/* .food-container {
-  background: lightseagreen; 
-} */
+.food-container {
+  background: lightseagreen;
+  display: flex;
+  justify-content: space-between;
+}
 .food-container h3 {
   font-size: 24px;
   font-weight: bold;
@@ -122,6 +129,23 @@ header img {
 .star {
   color: #ff8001;
   font-weight: bold;
+}
+
+.main-right {
+  width: 30%;
+  background: lightgoldenrodyellow;
+}
+
+.main-right button {
+  width: 70%;
+}
+
+.meal-cart {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  font-size: 14px;
+  background: yellow;
 }
 
 @media (max-width: 885px) {
