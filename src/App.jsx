@@ -70,7 +70,7 @@ function App() {
                                 Number.parseFloat(sousTotal) +
                                 Number.parseFloat(meal.price);
 
-                              setSousTotal(add);
+                              setSousTotal(Number.parseFloat(add));
                               setCartContainer(newCartContainer);
                             }}
                             key={meal.id}
@@ -109,13 +109,14 @@ function App() {
                   return (
                     <>
                       <div
+                        key={elem.title}
                         onChange={() => {
                           let add = sousTotal + elem.price;
                           setSousTotal(add);
                         }}
                         className="meal-cart"
                       >
-                        <p key={elem.title}>{elem.title}</p>
+                        <p>{elem.title}</p>
                         <span>{elem.price} €</span>
                       </div>
                     </>
