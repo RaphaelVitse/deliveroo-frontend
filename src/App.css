@@ -23,7 +23,6 @@ header img {
 .title-container {
   display: flex;
   justify-content: space-between;
-
   gap: 20px;
   padding: 25px 20px;
   /* background: crimson; */
@@ -84,6 +83,7 @@ header img {
   width: 380px;
   height: 160px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   gap: 10px;
@@ -99,7 +99,7 @@ header img {
   flex-direction: column;
   justify-content: space-between;
 
-  gap: 10px;
+  gap: 20px;
 }
 .meals-description p {
   font-size: 14px;
@@ -108,10 +108,14 @@ header img {
   /* background: blue; */
   overflow: hidden;
 }
+
+.meals-img img {
+  border-radius: 5px;
+}
 .star-container {
   /* background: green; */
   display: flex;
-  gap: 45px;
+  gap: 35px;
   align-items: center;
   height: 30px;
 }
