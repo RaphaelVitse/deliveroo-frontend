@@ -11,6 +11,8 @@ function App() {
   const [cartContainer, setCartContainer] = useState([]);
   const [sousTotal, setSousTotal] = useState(Number(0.0));
 
+  const deliveryCost = 2.5;
+
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -120,6 +122,8 @@ function App() {
                   );
                 })}
                 <p>Sous total = {Math.round(sousTotal * 100) / 100}</p>
+                <p> Frais de livraison = {deliveryCost}</p>
+                <p>Total = {sousTotal + deliveryCost}</p>
               </div>
             </div>
           </div>
