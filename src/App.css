@@ -60,9 +60,9 @@ header img {
   object-fit: cover;
 }
 
-.food-container {
-  /* background: lightseagreen; */
-}
+/* .food-container {
+  background: lightseagreen; 
+} */
 .food-container h3 {
   font-size: 24px;
   font-weight: bold;
@@ -108,8 +108,16 @@ header img {
   /* background: blue; */
   overflow: hidden;
 }
-.without-img {
-  width: 220px;
+.star-container {
+  /* background: green; */
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  height: 30px;
+}
+.star {
+  color: #ff8001;
+  font-weight: bold;
 }
 
 @media (max-width: 885px) {

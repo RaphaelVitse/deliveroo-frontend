@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import logo from "./assets/logo.svg";
 import "./App.css";
 import axios from "axios";
+import { FaStar } from "react-icons/fa6";
 
 function App() {
   const [data, setData] = useState({});
@@ -58,7 +59,14 @@ function App() {
                           <div className="meals-description">
                             <h4>{meal.title}</h4>
                             {meal.description && <p>{meal.description}</p>}
-                            <p>{meal.price} €</p>
+                            <div className="star-container">
+                              <p>{meal.price} €</p>
+                              {meal.popular && (
+                                <p className="star">
+                                  <FaStar /> Populaire
+                                </p>
+                              )}
+                            </div>
                           </div>
                           <div className="meals-img">
                             {meal.picture && <img src={meal.picture} alt="" />}
